@@ -17,7 +17,8 @@
       text-align: center;
       margin-top: 1rem;
       position: relative;
-      padding: 1rem 0 ;
+      padding: 1.5rem 0;
+    
       &__score {
         display: flex;
         flex-direction: column;
@@ -40,6 +41,28 @@
           color: blue;
           font-size: 1.2rem;
         }
+      }
+
+      &__user {
+        display: flex;
+        margin-left: 4rem;
+        & h4 {
+          margin-left: .5rem;
+        }
+        &__date {
+          margin-left: 1.5rem;
+          color: grey;
+        }
+        & img {
+          width: 6%;
+          margin-top: -0.5rem;
+        }
+      }
+
+      &__content {
+        margin-left: 4rem;
+        text-align: left;
+        color: grey;
       }
     }
     &:first-child {

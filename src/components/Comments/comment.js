@@ -6,10 +6,12 @@ import juliusomo from '../../../images/avatars/image-juliusomo.png';
 import maxblagun from '../../../images/avatars/image-maxblagun.png';
 import ramsesmiron from '../../../images/avatars/image-ramsesmiron.png';
 
+import reply from '../../../images/icon-reply.svg';
+
 const { comments, currentUser } = data;
 const { username } = currentUser;
-// const { user } = comments.user;
 
+console.log(comments, 'data');
 import './style.scss';
 
 export default function Comment() {
@@ -28,15 +30,22 @@ export default function Comment() {
 
       {
         comments.map((comment, i) => (
-          console.log(comment, 'comment'),
+          console.log(comment.user, 'comment'),
+          console.log(comment.user.image.png),
           <div className='comment__container'>
             <div className='comment__container__comment'>
+
               <div className='comment__container__comment__user'>
+                {/* <img src={comment.user.image.png} alt="avatar" /> */}
+                <img src={amyrobson? amyrobson : maxblagun} alt="avatar" />
                 <h4>
                   {comment.user.username}
                 </h4>
-                <img src={amyrobson} alt="avatar" />
-                <img src={comment.user.image.webp} alt="avatar" />
+                <div className='comment__container__comment__user__date'>
+                  <span>
+                    {comment.createdAt}
+                  </span>
+                </div>
               </div>
 
               <div className='comment__container__comment__score'>
@@ -44,6 +53,7 @@ export default function Comment() {
                 <span>
                   {comment.score}
                 </span>
+                
                 <button onClick={downValueScore}>-</button>
               </div>
 
@@ -55,11 +65,7 @@ export default function Comment() {
                 <p key={i}>{comment.content}</p>
               </div>
 
-              <div className='comment__container__comment__date'>
-                <span>
-                  {comment.createdAt}
-                </span>
-              </div>
+              
             </div>
           </div>
         )
