@@ -15,7 +15,15 @@ import './style.scss';
 export default function Comment() {
   // console.log(comments, 'comments');
   // console.log(username, 'username');
-  return (
+
+  function upValueScore() {
+    console.log('je Up');
+  
+  }
+  function downValueScore() {
+    console.log('je down');
+  }
+    return (
     <div className='comment'>
 
       {
@@ -32,7 +40,11 @@ export default function Comment() {
               </div>
 
               <div className='comment__container__comment__score'>
-                {comment.score}
+                <button onClick={upValueScore}>+</button>
+                <span>
+                  {comment.score}
+                </span>
+                <button onClick={downValueScore}>-</button>
               </div>
 
               <div className='comment__container__comment__replies'>

@@ -6,15 +6,44 @@
 
 .comment {
   width: 50%;
-  border: 1px solid red;
   margin: auto;
   &__container {
-    background-color: red;
+    background-color: white;
     width: 100%;
     height: 100%;
+    border-radius: 10px;
     &__comment {
       width: 100%;
       text-align: center;
+      margin-top: 1rem;
+      position: relative;
+      padding: 1rem 0 ;
+      &__score {
+        display: flex;
+        flex-direction: column;
+        font-size: .8rem;
+        color: blue;
+        font-weight: bold;
+        position: absolute;
+        background-color: #c6ccd2;
+        padding: .3rem;
+        top: 10%;
+        left: 2%;
+        border-radius: 10px;
+        & span {
+          padding-top: .2rem;
+        }
+        & button {
+          padding: .2rem;
+          background: none;
+          border: none;
+          color: blue;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    &:first-child {
+      margin-top: 2rem;
     }
   }
 }
