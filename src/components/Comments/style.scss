@@ -5,7 +5,7 @@
 }
 
 .comment {
-  width: 50%;
+  width: 35%;
   margin: auto;
   &__container {
     background-color: white;
@@ -61,8 +61,31 @@
 
       &__content {
         margin-left: 4rem;
+        margin-top: 1rem;
         text-align: left;
         color: grey;
+        width: 85%;
+      }
+
+      &__replies {
+        & button {
+          background-color: transparent;
+          border: none;
+          display: flex;
+        }
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        width: 7%;
+        & p {
+          color: blue;
+          margin-left: .3rem;
+        }
+        &:hover {
+          opacity: .5;
+        }
       }
     }
     &:first-child {

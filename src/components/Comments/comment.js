@@ -58,7 +58,9 @@ export default function Comment() {
               </div>
 
               <div className='comment__container__comment__replies'>
-                {comment.replies.length}
+                <button>
+                  <img src={reply} alt="" /><p>Reply</p>
+                </button>
               </div>
 
               <div className='comment__container__comment__content'>
